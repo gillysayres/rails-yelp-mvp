@@ -9,18 +9,18 @@ puts "Cleaning up database"
 Restaurant.destroy.all
 puts "Database is clean"
 
-puts "Creating Pokemons as tasks"
+puts "Creating Restaurants and Reviews"
 100.times do
   restaurant = Restaurant.create(
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
-    phone_number: Faker::PhoneNumber.cell_phone
+    phone_number: Faker::PhoneNumber.cell_phone,
     category: Faker::Restaurant.type
     )
-  review = Review.create(
-    rating: rand(1..5),
-    content: Faker::Restaurant.review
-    )
+  # review = Review.create(
+  #   rating: rand(1..5),
+  #   content: Faker::Restaurant.review
+  #   )
   puts "A restaurant #{restaurant.id} was created"
 end
 
