@@ -5,10 +5,10 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.net(review_params)
+    @review = Review.new(review_params)
     @review.restaurant = @restaraunt
     @review.save
-    redirect_to restaraurant_path(@restaurant)
+    redirect_to restaurant_path(@restaurant)
   end
 
   private

@@ -2,3 +2,6 @@
 <p><%= @restaurant.address %></p>
 <p><%= @restaurant.phone_number %></p>
 <p><%= @restaurant.category %></p>
+
+<%= link_to 'Back', restaurant_path %>
+<%= link_to 'Add a new review', new_restaurant_review_path(@restaurant) %>
