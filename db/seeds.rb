@@ -8,7 +8,7 @@ puts "Creating Restaurants and Reviews"
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
     phone_number: Faker::PhoneNumber.cell_phone,
-    category: Faker::Restaurant.type
+    category: %w[chinese italian japanese french belgian].sample
     )
 end
 
